@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: wheat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;  
+}
+header {
+  text-align: center;
+}
+main {
+  flex: 1 1 auto;
+}
+
+.slider-view {
+  width: 400px;
+  height: 400px;
+  background-color: aquamarine;
+}
+
+label > div{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+label > div:hover {
+  background-color: brown;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+
+footer {
+  background-color: black;
+  color: white;
+}
