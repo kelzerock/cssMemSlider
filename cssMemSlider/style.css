@@ -40,6 +40,24 @@ main {
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 7;
+  border-radius: 40px;
+  box-shadow: 10px 3px 7px #00000069;
+  border: solid 6px #BFA430;
+  width: 70%;
+  margin-right: calc(70% - 15%);
+}
+.slide {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide img {
+  /* width: auto; */
+  height: 100%;
 }
 .slider-text {
   background-color: green;
@@ -150,21 +168,18 @@ label > div:hover {
   flex-direction: row;
   transition: all 2s ease-out;
 }
-.slide {
-  height: 100%;
-  flex: 1 1 auto;
-}
+
 .slide1 {
-  background-color: green;
+  /* background-color: green; */
 }
 .slide2 {
-  background-color: rgb(197, 51, 25);
+  /* background-color: rgb(197, 51, 25); */
 }
 .slide3 {
-  background-color: rgb(35, 163, 202);
+  /* background-color: rgb(35, 163, 202); */
 }
 .slide4 {
-  background-color: rgb(131, 86, 121);
+  /* background-color: rgb(131, 86, 121); */
 }
 
 
