@@ -16,9 +16,15 @@ html, body {
 }
 header {
   text-align: center;
+  background-color: #FF9C00;
+  padding: 2% 0;
 }
 main {
   flex: 1 1 auto;
+  background-color: #BF8830;
+}
+.slider {
+  position: relative;
 }
 
 .slider-view {
@@ -27,7 +33,45 @@ main {
   background-color: aquamarine;
 }
 
-label > div{
+input.memInput {
+  display: none;
+}
+input.memInput + label{
+  display: block;
+  margin: 10px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+input.memInput + label > div {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: #FFB300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+input.memInput + label:hover > div {
+  background-color: #ECFF00;
+}
+input.memInput:checked + label > div > div {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background-color: #5000FF;
+}
+
+
+/* input.memInput:checked + label {
+  background-color: blue;
+} */
+/* label > div{
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -37,14 +81,28 @@ label > div{
 label > div:hover {
   background-color: brown;
   cursor: pointer;
-}
+} */
 
-input {
-  display: none;
-}
+
 
 
 footer {
-  background-color: black;
-  color: white;
+  background-color: #FFC973;
+  color: #A66500;
+  padding: 10px 5%;
 }
+
+footer img {
+  width: 40px;
+  margin: 0 3%;
+}
+
+footer > a {
+  text-decoration: none;
+  color: #A66500;
+  display: flex;
+  align-items: center;
+}
+
+
+
