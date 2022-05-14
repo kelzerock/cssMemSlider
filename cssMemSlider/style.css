@@ -25,12 +25,54 @@ main {
 }
 .slider {
   position: relative;
+  padding: 3%;
+  display: grid;
+  grid-template-rows: 20em 1em 4em;
+  grid-template-columns: 50% auto 4em 4em 4em 4em;
 }
 
 .slider-view {
-  width: 400px;
-  height: 400px;
+  /* width: 400px;
+  height: 400px; */
   background-color: aquamarine;
+  overflow: hidden;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+.slider-text {
+  background-color: green;
+  overflow: hidden;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.memLabel1 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.memLabel2 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.memLabel3 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+.memLabel4 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 6;
+  grid-column-end: 7;
 }
 
 input.memInput {
@@ -38,10 +80,10 @@ input.memInput {
 }
 input.memInput + label{
   display: block;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +109,22 @@ input.memInput:checked + label > div > div {
   background-color: #5000FF;
 }
 
+input.memInput1:checked + label ~ .slider-view > div,
+input.memInput1:checked + label ~ .slider-text > div {
+  transform: translate(0%);
+}
+input.memInput2:checked + label ~ .slider-view > div,
+input.memInput2:checked + label ~ .slider-text > div {
+  transform: translate(-25%);
+}
+input.memInput3:checked + label ~ .slider-view > div,
+input.memInput3:checked + label ~ .slider-text > div {
+  transform: translate(-50%);
+}
+input.memInput4:checked + label ~ .slider-view > div,
+input.memInput4:checked + label ~ .slider-text > div {
+  transform: translate(-75%);
+}
 
 /* input.memInput:checked + label {
   background-color: blue;
@@ -83,6 +141,31 @@ label > div:hover {
   cursor: pointer;
 } */
 
+
+.slider-block {
+  width: 400%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  transition: all 2s ease-out;
+}
+.slide {
+  height: 100%;
+  flex: 1 1 auto;
+}
+.slide1 {
+  background-color: green;
+}
+.slide2 {
+  background-color: rgb(197, 51, 25);
+}
+.slide3 {
+  background-color: rgb(35, 163, 202);
+}
+.slide4 {
+  background-color: rgb(131, 86, 121);
+}
 
 
 

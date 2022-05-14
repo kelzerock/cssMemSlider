@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
   <title>Document</title>
 </head>
-<body>
 
+<body>
   <div class="wrapper">
-      <header><h1>CssMemSlider</h1></header>
-      <main>
-       <div class="slider">     
-      <input name="mem-control" type="radio" id="show1" class="memInput" checked>
-      <label for="show1"> <div><div class="inside"></div></div></label>
-      <input name="mem-control" type="radio" id="show2" class="memInput">
-      <label for="show2"><div><div class="inside"></div></div></label>
-      
-      <div class="slider-view-1 slider-view">What you see</div>
-    </div>
-      </main>
+    <header>
+      <h1>CssMemSlider</h1>
+    </header>
+    <main>
+      <div class="slider">
+        <input name="mem-control" type="radio" id="show1" class="memInput memInput1" checked />
+        <label class="memLabel1" for="show1">
+          <div>
+            <div class="inside"></div>
+          </div>
+        </label>
+        <input name="mem-control" type="radio" id="show2" class="memInput memInput2" />
+        <label class="memLabel2" for="show2">
+          <div>
+            <div class="inside"></div>
+          </div>
+        </label>
+        <input name="mem-control" type="radio" id="show3" class="memInput memInput3" checked />
+        <label class="memLabel3" for="show3">
+          <div>
+            <div class="inside"></div>
+          </div>
+        </label>
+        <input name="mem-control" type="radio" id="show4" class="memInput memInput4" />
+        <label class="memLabel4" for="show4">
+          <div>
+            <div class="inside"></div>
+          </div>
+        </label>
+
+        <div class="slider-view">
+          <div class="slider-block">
+            <div class="slide slide1"></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
+          </div>
+        </div>
+        <div class="slider-text">
+          <div class="slider-block">
+          <div class="slide slide1"></div>
+          <div class="slide slide2"></div>
+          <div class="slide slide3"></div>
+          <div class="slide slide4"></div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer>
       <a href="https://github.com/kelzerock">
-        <img src="./assets/github.png" alt="github picture">
+        <img src="./assets/github.png" alt="github picture" />
         <h3>RSSCHOOL 2022Q1</h3>
       </a>
     </footer>
   </div>
 </body>
+
 </html>
