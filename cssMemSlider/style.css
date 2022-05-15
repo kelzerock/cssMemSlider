@@ -28,24 +28,28 @@ main {
   padding: 3%;
   display: grid;
   grid-template-rows: 20em 1em 4em;
-  grid-template-columns: 50% auto 4em 4em 4em 4em;
+  grid-template-columns: 50% 1fr 4em 4em 4em 4em;
 }
 
 .slider-view {
-  /* width: 400px;
-  height: 400px; */
-  background-color: aquamarine;
   overflow: hidden;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-center {
+  overflow: hidden;
   border-radius: 40px;
   box-shadow: 10px 3px 7px #00000069;
   border: solid 6px #BFA430;
-  width: 70%;
-  margin-right: calc(70% - 15%);
+  width: 95%;
+  height: 90%;
 }
+
 .slide {
   height: 100%;
   width: 25%;
@@ -53,6 +57,8 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  color: #A66500;
+  font-size: 2rem;
 }
 
 .slide img {
@@ -60,12 +66,18 @@ main {
   height: 100%;
 }
 .slider-text {
-  background-color: green;
+  /* background-color: green; */
   overflow: hidden;
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 2;
+}
+.slide-text {
+  color: #2100A6;
+  font-size: 1.5rem;
+  background: none;
+  justify-content: start;
 }
 
 .memLabel1 {
@@ -127,37 +139,35 @@ input.memInput:checked + label > div > div {
   background-color: #5000FF;
 }
 
-input.memInput1:checked + label ~ .slider-view > div,
+input.memInput1:checked + label ~ .slider-view > div > div {
+  transform: translate(0%);
+}
+input.memInput2:checked + label ~ .slider-view > div > div {
+  transform: translate(-25%);
+}
+input.memInput3:checked + label ~ .slider-view > div > div {
+  transform: translate(-50%);
+}
+input.memInput4:checked + label ~ .slider-view > div > div {
+  transform: translate(-75%);
+}
+
+
 input.memInput1:checked + label ~ .slider-text > div {
   transform: translate(0%);
 }
-input.memInput2:checked + label ~ .slider-view > div,
+
 input.memInput2:checked + label ~ .slider-text > div {
   transform: translate(-25%);
 }
-input.memInput3:checked + label ~ .slider-view > div,
+
 input.memInput3:checked + label ~ .slider-text > div {
   transform: translate(-50%);
 }
-input.memInput4:checked + label ~ .slider-view > div,
 input.memInput4:checked + label ~ .slider-text > div {
   transform: translate(-75%);
 }
 
-/* input.memInput:checked + label {
-  background-color: blue;
-} */
-/* label > div{
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: black;
-}
-
-label > div:hover {
-  background-color: brown;
-  cursor: pointer;
-} */
 
 
 .slider-block {
@@ -166,22 +176,12 @@ label > div:hover {
   background: black;
   display: flex;
   flex-direction: row;
-  transition: all 2s ease-out;
+  transition: all 1.5s ease-out;
 }
 
-.slide1 {
-  /* background-color: green; */
+.slider-text .slider-block {
+  background: none !important;
 }
-.slide2 {
-  /* background-color: rgb(197, 51, 25); */
-}
-.slide3 {
-  /* background-color: rgb(35, 163, 202); */
-}
-.slide4 {
-  /* background-color: rgb(131, 86, 121); */
-}
-
 
 
 footer {
@@ -202,5 +202,45 @@ footer > a {
   align-items: center;
 }
 
+@keyframes changeView {
+  0% { opacity: 1;}
+  30% { opacity: 0;}
+  50% { opacity: 0;}   
+  100% { opacity: 1;}
+ }
 
-
+@media screen and (max-width: 700px) {
+  .slider {
+    grid-template-rows: 20em 0.5em 2em 0.5em 1fr ;
+    grid-template-columns: 1fr 2em 2em 2em 2em 1fr;
+  }
+  .slider-text {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .memLabel1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .memLabel2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .memLabel3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .memLabel4 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+  .slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .slide-text {
+    font-size: 1rem;
+  }
+}
