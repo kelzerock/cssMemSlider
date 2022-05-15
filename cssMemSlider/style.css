@@ -60,6 +60,24 @@ main {
   color: #A66500;
   font-size: 2rem;
 }
+.slide {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+}
+.slide1 {
+  background-image: url('./assets/Screenshot1.png');
+}
+.slide2 {
+  background-image: url('./assets/Screenshot5.png');
+}
+.slide3 {
+  background-image: url('./assets/Screenshot3.png');
+}
+.slide4 {
+  background-image: url('./assets/Screenshot4.png');
+}
 
 .slide img {
   /* width: auto; */
@@ -154,18 +172,18 @@ input.memInput4:checked + label ~ .slider-view > div > div {
 
 
 input.memInput1:checked + label ~ .slider-text > div {
-  transform: translate(0%);
+  transform: translate(-75%);
 }
 
 input.memInput2:checked + label ~ .slider-text > div {
-  transform: translate(-25%);
+  transform: translate(-50%);
 }
 
 input.memInput3:checked + label ~ .slider-text > div {
-  transform: translate(-50%);
+  transform: translate(-25%);
 }
 input.memInput4:checked + label ~ .slider-text > div {
-  transform: translate(-75%);
+  transform: translate(0%);
 }
 
 
@@ -177,10 +195,12 @@ input.memInput4:checked + label ~ .slider-text > div {
   display: flex;
   flex-direction: row;
   transition: all 1.5s ease-out;
+  transform: translate(-75%);
 }
 
 .slider-text .slider-block {
   background: none !important;
+  width: 700%;
 }
 
 
