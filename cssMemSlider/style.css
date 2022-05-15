@@ -84,7 +84,6 @@ main {
   height: 100%;
 }
 .slider-text {
-  /* background-color: green; */
   overflow: hidden;
   grid-row-start: 3;
   grid-row-end: 4;
@@ -128,7 +127,6 @@ input.memInput {
 }
 input.memInput + label{
   display: block;
-  /* margin: 10px; */
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -137,7 +135,7 @@ input.memInput + label{
   align-items: center;
   cursor: pointer;
 }
-input.memInput + label > div {
+input.memInput + label > span {
   height: 50%;
   width: 50%;
   border-radius: 50%;
@@ -147,10 +145,10 @@ input.memInput + label > div {
   align-items: center;
   cursor: pointer;
 }
-input.memInput + label:hover > div {
+input.memInput + label:hover > span {
   background-color: #ECFF00;
 }
-input.memInput:checked + label > div > div {
+input.memInput:checked + label > span > span {
   height: 80%;
   width: 80%;
   border-radius: 50%;
