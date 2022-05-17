@@ -6,7 +6,7 @@ html, body {
   height: 100%;
 }
 .wrapper {
-  max-width: 1000px;
+  max-width: 50rem;
   margin: 0 auto;
   background-color: wheat;
   overflow: hidden;
@@ -148,6 +148,9 @@ input.memInput + label > span {
 input.memInput + label:hover > span {
   background-color: #ECFF00;
 }
+input.memInput + label:active > span {
+  background-color: #fa1c1c;
+}
 input.memInput:checked + label > span > span {
   height: 80%;
   width: 80%;
@@ -205,11 +208,11 @@ input.memInput4:checked + label ~ .slider-text > div {
 footer {
   background-color: #FFC973;
   color: #A66500;
-  padding: 10px 5%;
+  padding: 1% 5%;
 }
 
 footer img {
-  width: 40px;
+  width: 5%;
   margin: 0 3%;
 }
 
